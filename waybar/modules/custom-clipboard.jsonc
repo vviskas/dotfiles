@@ -1,0 +1,17 @@
+{
+    "custom/clipboard": {
+        "format": "\uf07f",
+        "tooltip": false,
+        "menu": "on-click-right",
+        "menu-file": "$HOME/.config/waybar/menus/clipboard.xml",
+        "menu-actions": {
+            "favorites": "$HOME/.config/waybar/scripts/cliphist.sh --favorites",
+            "history": "$HOME/.config/waybar/scripts/cliphist.sh --copy",
+            "delete": "$HOME/.config/waybar/scripts/cliphist.sh --delete",
+            "manage-favorites": "$HOME/.config/waybar/scripts/cliphist.sh --manage-fav",
+            "clear-history": "$HOME/.config/waybar/scripts/cliphist.sh --wipe"
+        },
+        "signal": 2
+    },
+    "_comments": []
+}
