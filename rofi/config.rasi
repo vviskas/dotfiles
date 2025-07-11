@@ -1,0 +1,11 @@
+configuration {
+	display-drun: "Applications:";
+	display-wondow: "Windows:";
+	drun-display-format: "{icon} {name}";
+	font: "JetBrainsMono Nerd Font Propo 10";
+	modi: "window,run,drun";
+	show-icons: true;
+	icon-theme: "Papirus";
+}
+
+@theme "/home/wiskas/.config/rofi/themes/squared-nord.rasi"

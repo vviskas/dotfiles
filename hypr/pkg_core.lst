@@ -10,6 +10,7 @@ pavucontrol
 pamixer
 networkmanager
 network-manager-applet
+power-profiles-daemon
 bluez
 bluez-utils
 blueman
@@ -28,7 +29,9 @@ waybar
 hyprlock
 hypridle
 hyprshot
+wpaperd
 swaync
+swayosd
 hyprpicker
 cliphist
 wl-clipboard
@@ -55,10 +58,14 @@ qt5-wayland
 qt6-wayland
 # --------------------------------------------------- // Applications
 kitty
-dolphin
+thunar
+btop
 ark
 unzip
 neovim
 kate
 nwg-displays
 fzf
+zsh
+zoxide
+starship
