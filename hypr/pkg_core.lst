@@ -10,7 +10,7 @@ pavucontrol
 pamixer
 networkmanager
 network-manager-applet
-power-profiles-daemon
+tlp
 bluez
 bluez-utils
 blueman
@@ -30,8 +30,7 @@ hyprlock
 hypridle
 hyprshot
 wpaperd
-swaync
-swayosd
+mako
 hyprpicker
 cliphist
 wl-clipboard
@@ -41,10 +40,9 @@ polkit-gnome
 hyprpolkitagent
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-gtk
+xdg-desktop-portal-gnome
 xdg-user-dirs
 pacman-contrib
-parallel
-imagemagick
 qt5-imageformats
 ffmpegthumbs
 kde-cli-tools
@@ -56,9 +54,11 @@ qt5ct
 qt6ct
 qt5-wayland
 qt6-wayland
+kvantum
 # --------------------------------------------------- // Applications
 kitty
 thunar
+yazi
 btop
 ark
 unzip
@@ -67,5 +67,3 @@ kate
 nwg-displays
 fzf
 zsh
-zoxide
-starship

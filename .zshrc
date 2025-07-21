@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -21,6 +28,10 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+
+export PATH="${HOME}/.local/bin:$PATH"
+export EDITOR="nvim"
+
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -37,10 +48,18 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 autoload -U compinit && compinit
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+# eval "$(starship init zsh)"
 
-eval "$(starship init zsh)"
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/wiskas/.dart-cli-completion/zsh-config.zsh ]] && . /home/wiskas/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
