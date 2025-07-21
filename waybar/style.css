@@ -1,11 +1,13 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FiraCode Nerd Font Propo;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0);
+    background-color: @bg-1;
     /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
     /* color: #ffffff; */
     /* transition-property: background-color; */
@@ -31,6 +33,22 @@ window#waybar.hidden {
 @define-color orange #ff9e64;
 @define-color red #f7768e;
 @define-color red2 #f82938;
+
+
+@define-color nv_green0 #C3E88D;
+@define-color nv_green1 #81BB67;
+@define-color nv_green2 #70AA40;
+@define-color nv_green3 #488637;
+
+@define-color nv_blue1 #3FA6DF;
+@define-color nv_blue2 #387BC3;
+
+@define-color nv_purple #C099FF;
+
+@define-color nv_orange #FFC777;
+
+@define-color nv_text #C0CAF5;
+@define-color nv_darkgrey #444444;
 
 /*
 box.modules-right{
@@ -79,301 +97,264 @@ button:hover {
 } 
 */
 
-#battery {
-    color: #ffffff;
-    padding: 0 1.5rem;
-    border-radius: 1rem;
-    /* margin: 0.15rem 0 0.15rem 0; */
+/*Custom HW Section*/
+    /* CPU */
+        /* CPU Load */
+#cpu, #custom-gpu_usage {
+    background-color: @nv_green1;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
-#battery.10{
-    background-image: linear-gradient(90deg, @red2 0%, #1a1b26 7%);
-}
-#battery.20{
-    background-image: linear-gradient(90deg, @red2 15%, #1a1b26 17%);
-}
-#battery.30{
-    background-image: linear-gradient(90deg, @red 25%, #1a1b26 27%);
-}
-#battery.40{
-    background-image: linear-gradient(90deg, @orange 35%, #1a1b26 37%);
-}
-#battery.50{
-    background-image: linear-gradient(90deg, @yellow 45%, #1a1b26 47%);
-}
-#battery.60{
-    background-image: linear-gradient(90deg, @green, @greenblue 55%, #1a1b26 57%);
-    /* padding: 0 1.4rem; */
-}
-#battery.70{
-    background-image: linear-gradient(90deg, @green, @greenblue 65%, #1a1b26 67%);
-}
-#battery.80{
-    background-image: linear-gradient(90deg, @green, @greenblue 75%, #1a1b26 77%);
-}
-
-#battery.90{
-    background-image: linear-gradient(90deg, @green, @greenblue 85%, #1a1b26 87%);
-}
-#battery.100{
-    background-image: linear-gradient(90deg, @green, @greenblue 95%, #1a1b26);
-}
-
-#battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
-}
-
-#custom-btr-icon{
-    background-color: @bg-1;
-    color: @fg-1;
-    font-size: 0.1rem;
-    min-width: 0.3rem;
-    margin: 0.6rem 0rem 0.6rem 0.1rem;
-    border-radius: 0 0.15rem 0.15rem 0;
-}
-#btr{
-    padding: 0rem 0.3rem 0 0;
-
-}
-
-/* you can set a style on hover for any module like this */
 #cpu {
-    background-color: @bg-1;
-    color: @fg-1;
-    min-width: 2rem;
-    padding-left: 0.5rem;
-    border-radius: 1rem 0 0 1rem;
+    padding-left: 12px;
 }
 
-#custom-separator_cpu{
-    background-color: @bg-1;
-    color: @fg-1;
-    padding-right: 0.7rem;
+        /* CPU Separator Icon */
+
+#custom-separator_cpu, #custom-separator_gpu {
+    background-color: @nv_green1;
 }
 
-#temperature{
-    background-color: @bg-1;
-    color: @fg-1;
-    border-radius: 0 1rem 1rem 0;
-    padding-right: 0.8rem;
+        /* CPU Temp */
+#temperature, #temperature.GPU{
+    background-color: @nv_green1;
+    padding-left: 8px;
+    padding-right: 6px;
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+    color: @red;
+}
+        /* CPU End */
+
+        /* GPU Section */
+#custom-separator_gpu_left, #custom-separator_mem_left, #custom-separator_work_left{
+    background-color: @nv_blue2;
+    color: @nv_green1;
+    font-size: 1.45rem;
 }
 
-#custom-gpu-usage {
-    background-color: @bg-1;
-    color: @fg-1;
-    min-width: 2rem;
-    padding-left: 0.5rem;
-    border-radius: 1rem 0 0 1rem;
+        /* GPU Usage */
+#custom-gpu_usage {
+    background-color: @nv_blue2;
 }
 
-#custom-separator_gpu{
-    background-color: @bg-1;
-    color: @fg-1;
-    padding-right: 0.7rem;
+        /* GPU Separator Icon */
+#custom-separator_gpu{ 
+    background-color: @nv_blue2;
 }
 
+        /* GPU Temp */
 #temperature.GPU{
-    background-color: @bg-1;
-    color: @fg-1;
-    border-radius: 0 1rem 1rem 0;
+    background-color: @nv_blue2;
 }
 
-#memory {
-    background-color: @bg-1;
-    color: @fg-1;
-    border-radius: 1rem;
-    padding-left: 0.7rem;
-    padding-right: 0.7rem;
+        /* GPU END */
+    /* HW END */
+
+    /* Memory */
+#custom-separator_mem_left{
+    background-color: @nv_purple;
+    color: @nv_blue2;
 }
 
+#memory{
+    background-color: @nv_purple;
+        padding-left: 8px;
+        padding-right: 8px;
+}
+
+    /* Workspaces */
+#custom-separator_work_left{
+    background-color: @bg-1;
+    color: @nv_purple;
+}
 #workspaces{
+    background-color: @bg-1;
+        padding: 0px 6px;
 }
 #workspaces button{
-    padding: 0 0;
-    background: @bg-1;
+    background-color: @bg-1;
+        font-size: 0.1rem;
+}
+/* Module Left END */
+
+
+/* Module Centre */
+
+    /* Window */
+
+/* Module Centre END */
+
+
+/* Module Right */
+
+    /* Battery */
+#battery {
+    background-color: @bg-1;
+    font-size: 1.42rem;
+}
+
+#battery.10{
+    /* background-image: linear-gradient(90deg, @red2 0%, #1a1b26 7%); */
+    color: @red2;
+}
+#battery.20{
+    /* background-image: linear-gradient(90deg, @red2 15%, #1a1b26 17%); */
+    color: @red2;
+}
+#battery.30{
+    /* background-image: linear-gradient(90deg, @red 25%, #1a1b26 27%); */
+    color: @red;
+}
+#battery.40{
+    /* background-image: linear-gradient(90deg, @orange 35%, #1a1b26 37%); */
+    color: @orange;
+}
+#battery.50{
+    /* background-image: linear-gradient(90deg, @yellow 45%, #1a1b26 47%); */
+    color: @yellow;
+}
+#battery.50.charging{
+    /* background-image: linear-gradient(90deg, @yellow 45%, #1a1b26 47%); */
+    color: @blue2;
+}
+#battery.60{
+    /* background-image: linear-gradient(90deg, @green, @greenblue 55%, #1a1b26 57%); */
     color: @greenblue;
-    border-radius: 1rem;
-    margin: 0.2rem 0.2rem;
+}
+#battery.60.charging{
+    /* background-image: linear-gradient(90deg, @green, @greenblue 55%, #1a1b26 57%); */
+    color: @blue2;
+}
+#battery.70{
+    /* background-image: linear-gradient(90deg, @green, @greenblue 65%, #1a1b26 67%); */
+    color: @greenblue;
+}
+#battery.70.charging{
+    /* background-image: linear-gradient(90deg, @green, @greenblue 65%, #1a1b26 67%); */
+    color: @blue2;
+}
+#battery.80{
+    /* background-image: linear-gradient(90deg, @green, @greenblue 75%, #1a1b26 77%); */
+    color: @blue1;
+}
+#battery.90{
+    /* background-image: linear-gradient(90deg, @green, @greenblue 85%, #1a1b26 87%); */
+    color: @blue1;
+}
+#battery.100{
+    /* background-image: linear-gradient(90deg, @green, @greenblue 95%, #1a1b26); */
+    color: @blue1;
 }
 
-#workspaces button.active{
-    background: @fg-1;
-    color: @bg-1;
-}
-#workspaces button.empty {
-    background: @bg-1;
-    color: @fg-1;
+#battery.charging, #battery.plugged {
+    animation-name: charge;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
-#pulseaudio {
-    background-color: @bg-1;
-    color: @fg-1;
-    border-radius: 1rem;
-    padding-left: 0.7rem;
-    padding-right: 0.7rem;
-}
+@keyframes charge {
+    0% {
+    background-image: linear-gradient(45deg, @bg-1 10%, @blue2 30%, @bg-1 90%)
+    } 
+    
+    50% {
+        background-image: linear-gradient(90deg, @bg-1 40%,  @bg-1 90%)
+    }
 
-#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
-}
-
-#wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
-}
-
-#wireplumber.muted {
-    background-color: #f53c3c;
-}
-
-#mode {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-}
-#custom-pacman {
-    background-color: @bg-1;
-    color: @fg-1;
-    border-radius: 1rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-}
-
-#tray {
-    background-color: @bg-1;
-    color: @fg-1;
-    border-radius: 1rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
-}
-
-#idle_inhibitor {
-    background-color: #2d3436;
-}
-
-#idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
-}
-
-#language {
-    background: @bg-1;
-    color: @fg-1;
-    padding: 0 5px;
-    border-radius: 2rem;
-    min-width: 16px;
-}
-
-#clock {
-    background-color: @bg-1;
-    color: @fg-1;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    border-radius: 2rem;
-}
-
-
-#window {
-    background: @bg-1;
-    color: @fg-1;
-    border-radius: 1rem;
-    padding: 0 0.7rem;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
-
-
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
+    100% {
+        background-image: linear-gradient(45deg, @bg-1 10%, @blue2 30%, @bg-1 90%)
     }
 }
 
-/* Using steps() instead of linear as a timing function to limit cpu usage */
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
+    /* Backlight */
 
-#power-profiles-daemon {
-    color: @fg-1;
+#custom-battery_sep{
+    font-size: 1.45rem;
     background-color: @bg-1;
-    padding: 0 1rem 0 0.7rem;
-    border-radius: 1rem;
+    color: @nv_green3;
+    padding-left: 8px;
+}
+#custom-power_sep{
+    font-size: 1.45rem;
+    background-color: @nv_purple;
+    color: @nv_darkgrey;
 }
 
-label:focus {
-    background-color: #000000;
+#custom-clock_sep{
+    font-size: 1.45rem;
+    background-color: @nv_blue2;
+    color: @nv_purple;
 }
 
-#backlight {
-    color: @fg-1;
+#custom-lang_sep{
+    font-size: 1.45rem;
+    background-color: @nv_green3;
+    color: @nv_blue2;
+}
+
+#backlight, #pulseaudio, #tray, #custom-pacman, #idle_inhibitor, #language, #clock, #custom-power{
+    background-color: @nv_green3;
+}
+    /* Pulseaudio */
+
+#backlight{
+    padding: 0 8px;
+}
+
+#pulseaudio{
+    /* background-color: @nv_blue1; */
+    padding: 0 8px;
+}
+
+    /* Tray */
+#tray{
+    background-color: @nv_green3;
+        padding: 0 8px;
+}
+
+    /* Updates */
+
+    /* Idle */
+#idle_inhibitor.deactivated{
     background-color: @bg-1;
-    padding: 0 0.7rem 0 0.6rem;
-    border-radius: 1rem;
+    border-radius: 30px;
+    padding: 0px 2px;
+    margin: 2px 10px;
 }
 
-#network {
-    background-color: #2980b9;
+#idle_inhibitor.activated{
+    background-color: @nv_text;
+    color: @bg-1;
+    border-radius: 30px;
+    padding: 0px 2px;
+    margin: 2px 10px;
+    box-shadow: 0px 0px 5px 3px @nv_text;
 }
 
-#network.disconnected {
-    background-color: #f53c3c;
+    /* Language */
+#language{
+    background-color: @nv_blue2;
+        padding: 0 8px;
 }
 
-#scratchpad {
-    background: rgba(0, 0, 0, 0.2);
+    /* Clock */
+#clock{
+    background-color: @nv_purple;
+    padding: 0 8px;
 }
 
-#scratchpad.empty {
-	background-color: transparent;
+    /* Power */
+#custom-power{
+    background-color: @nv_darkgrey;
+    padding: 0px 6px;
 }
+    /* Updates */
+#custom-pacman{
+    background-color: @nv_darkgrey;
+    padding: 0 8px;
+}
+/* Module Right END */
 
-#privacy {
-    padding: 0;
-}
-
-#privacy-item {
-    padding: 0 5px;
-    color: white;
-}
-
-#privacy-item.screenshare {
-    background-color: #cf5700;
-}
-
-#privacy-item.audio-in {
-    background-color: #1ca000;
-}
-
-#privacy-item.audio-out {
-    background-color: #0069d4;
-}
