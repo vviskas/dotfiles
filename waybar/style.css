@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FiraCode Nerd Font Propo;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #ffffff;
 
 }
@@ -193,7 +193,7 @@ button:hover {
     /* Battery */
 #battery {
     background-color: @bg-1;
-    font-size: 1.42rem;
+    font-size: 1.48rem;
 }
 
 #battery.10{
@@ -257,15 +257,15 @@ button:hover {
 
 @keyframes charge {
     0% {
-    background-image: linear-gradient(45deg, @bg-1 10%, @blue2 30%, @bg-1 90%)
+    background-image: linear-gradient(70deg, @bg-1 10%, @blue2 20%, @bg-1 90%)
     } 
     
     50% {
-        background-image: linear-gradient(90deg, @bg-1 40%,  @bg-1 90%)
+        background-image: linear-gradient(30deg, @bg-1 40%,  @bg-1 90%)
     }
 
     100% {
-        background-image: linear-gradient(45deg, @bg-1 10%, @blue2 30%, @bg-1 90%)
+        background-image: linear-gradient(70deg, @bg-1 10%, @blue2 20%, @bg-1 90%)
     }
 }
 
