@@ -1,0 +1,245 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    "margin-top": 4,
+    "margin-left": 4,
+    "margin-right": 4,
+    // "width": 1280, // Waybar width
+
+    "spacing": 8, // Gaps between modules (4px)
+
+    "modules-left":[
+        "group/hw_cpu",
+        "group/hw_gpu",
+        "memory",
+        "hyprland/workspaces",
+        "niri/workspaces"
+    ],
+    "modules-center":[
+        "hyprland/window",
+        "niri/window"
+    ],
+    "modules-right":[
+        // "group/btr",
+        "battery",
+        "backlight",
+        "pulseaudio",
+        "tray",
+        "custom/pacman",
+        "idle_inhibitor",
+        "hyprland/language",
+        "niri/language",
+        "clock",
+        "custom/swaync",
+        "custom/power"
+    ],
+    
+    "hyprland/workspaces":{
+        "format": "{name}"
+    },
+
+    "group/hw_cpu": {
+        "orientation": "horizontal",
+        "modules": [
+            "cpu",
+            "custom/separator_cpu",
+            "temperature"
+        ]
+    },
+    "group/hw_gpu":{
+        "orientation": "horizontal",
+        "modules":[
+            "custom/gpu-usage",
+            "custom/separator_gpu",
+            "temperature#GPU"
+        ]
+    },
+
+    "group/btr":{
+        "orientation": "horizontal",
+        "modules":[
+            "battery",
+            "custom/btr-icon"
+        ]
+    },
+
+    "custom/separator_cpu":{
+        "format": ""
+    },
+    "custom/separator_gpu":{
+        "format": "󰢮"
+    },
+
+    "custom/btr-icon":{
+        "format": "",
+    },
+
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "niri/window": {
+        "format": "{title}",
+        "icon": "true"
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 2,
+        "show-passiv-items": "true",
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+    },
+    "custom/pacman": {
+        "format": "{}",
+        "interval": 3600,                     // every hour
+        "exec": "$HOME/.config/waybar/scripts/checkupdates.sh checkupdates.sh | jq --unbuffered --compact-output",      // # of updatesh
+        // "exec-if": "exit 0",                  // always run; consider advanced run conditions
+        // "on-click": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
+        "tooltip": "true",
+        // "tooltip-format": "{}",
+        "return-type": "json",
+        "signal": 8
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "hyprland/language":{
+        "format": "{}",
+        "format-en": "en",
+        "format-ru": "ru"
+    },
+    "niri/language":{
+        // "format": "{shortDescription}",
+        "format-us": "en",
+        // "format-ru": "ru"
+    },
+    "cpu": {
+        "format": "{usage}%",
+        "max-length": "4",
+        "states": {
+            "low": 20,
+            "moderate": 40,
+            "high": 60,
+            "max": 80
+        },
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% ",
+        "tooltip": true,
+        "tooltip-format": "{used}GiB - {avail}GiB"
+    },
+
+    "custom/gpu-usage":{
+        "exec": "cat /sys/class/hwmon/hwmon5/device/gpu_busy_percent",
+        "format": "{}%",
+        "max-length": "4",
+        "return-type": "",
+        "interval": 4
+
+    },
+    "temperature#GPU": {
+        "thermal-zone": 1,
+        "hwmon-path": "/sys/devices/pci0000:00/0000:00:08.1/0000:07:00.0/hwmon/hwmon5/temp1_input",
+        "critical-threshold": 70,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    "temperature": {
+        "thermal-zone": 8,
+        "hwmon-path": "/sys/devices/virtual/thermal/thermal_zone0/hwmon1/temp1_input",
+        "critical-threshold": 70,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+        "states": {
+            "10": 10,
+            "20": 20,
+            "30": 30,
+            "40": 40,
+            "50": 50,
+            "60": 60,
+            "70": 70,
+            "80": 80,
+            "90": 90,
+            "100": 100
+        },
+        "format": "{capacity}%",
+        // "format-full": "{capacity}% {icon}",
+        // "format-charging": "{capacity}% ",
+        // "format-plugged": "{capacity}% ",
+        "format-alt": "{time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/power": {
+        "format" : "⏻ ",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "$HOME/.config/waybar/custom_modules/power_menu.xml", // Menu file in resources folder
+		"menu-actions": {
+			"shutdown": "shutdown",
+			"reboot": "reboot",
+			"suspend": "systemctl suspend"
+			// "hibernate": "systemctl hibernate"
+		}
+    }
+}

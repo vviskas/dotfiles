@@ -1,0 +1,1142 @@
+fastfetch
+cd ~/.config/
+ls
+cd nushell/
+ls
+lell env.nu
+less env.nu
+cat history.txt
+config
+setup
+config nu 
+config env
+$nu.config-path
+ls
+ls -la
+pacman -Ss oh-my-posh
+yay -Ss oh-my-posh
+yay -S oh-my-posh
+oh-my-posh init nu
+cd ~
+ls
+ls -la
+cd ~/Downloads/
+ls
+cd ~/.config/
+ls
+cd nushell/
+ls
+cd ..
+fzf
+find ~ -name "*.omp"
+find ~ -n "*.omp"
+find ~ -i *.omp
+config
+config -h
+config nu
+cd ~/.c
+cd ~/.config/
+ls | sort-by size
+ls | sort-by modified
+rm WorkFlowy/
+rm -rf WorkFlowy/
+ps
+ps | where status == Running
+ps | describe
+ls | sort-by size | reverse | first | get name | pc $in ~
+ls | sort-by size | reverse | first | get name | cp $in ~
+ls | sort-by size | reverse | first | get name 
+ls | sort-by size | reverse | get name 
+cd ~
+ls
+rm syncthingtray.ini
+help escapes 
+help -f filesize
+help commands
+help commands | reverse
+help commands | less
+help modules 
+help commands | explore 
+date time
+date time now
+date -time
+date now
+time
+help commands | explore 
+ls *.toml
+ls
+cd ~/.config/
+ls *.toml
+ls **/*.config
+ls **/*.css
+$env.config.buffer_editor = "nvim"
+config nu
+$env.config.buffer_editor = "nvim"
+help config env
+config env
+$env.config.buffer_editor = "nvim"
+config env
+config env --doc | nu-highlight
+config nu
+cd ~/.config/
+cd ~/Downloads/
+ls
+mkdir ~/.poshthemes
+mv atomic.omp.json ~/.poshthemes/
+cd ~/.poshthemes/
+ls
+cd ~
+ls *.nu
+config nu --doc | nu-highlight | less -R
+cd ~/.config/
+cd nvim/
+cd ~/Downloads/
+ls
+mv blueish.omp.json ~/.poshthemes/
+cd ~/.po
+cd ~/.poshthemes/
+ls
+cd ~/.poshthemes/
+cd ~/Downloads/
+ls
+mv devious-diamonds.omp.yaml ~/.poshthemes/
+cd ~/Downloads/
+cd ~/.config/nvim
+cd ~/Downloads/
+ls
+mv di4am0nd.omp.json ~/.poshthemes/
+cd ~/.config/nvim
+ls
+cd ~/Downloads/
+ls
+cd dotfiles/
+zoxide dotfiles
+zoxide add ~/Downloads/dotfiles/
+dotfiles
+cd ~/Downloads/dotfiles/
+ls
+cd waybar/
+cd ~/Downloads/dotfiles/
+cd ..
+ls
+mv dracula.omp.json ~/.poshthemes/
+cd ~/Downloads/dotfiles/
+cd ..
+mv easy-term.omp.json ~/.poshthemes/
+cd ~/Downloads/dotfiles/
+sudo pacman -Syu
+pacman -Qs wofi
+sudo pacman -Ru wofi
+cd ~/.config/
+cd ~/Downloads/dotfiles/
+ls
+cd ~/Downloads/dotfiles/
+journalctl 
+journalctl | explore
+journalctl | last 20  
+cd ~/Tmp
+cd ~/tmp
+mkdir ~/temp
+cd temp
+cd ~/temp
+joutnalctl >> jrnl
+joutnalctl
+journalctl >> jrnl
+.journalctl >> jrnl
+*journalctl >> jrnl
+journalctl >> jrnl
+journalctl | last 50 | save jrnl
+ls jrnl
+echo jrnl
+jrnl explore
+explore jrnl
+ls
+cd ~/temp
+ls
+cd ..
+ls
+ls jrnl | explore
+cat jrnl
+journalctl | last 50 
+journalctl | last 200
+journalctl | tail -n 20
+journalctl | tail -n 20 | explore
+journalctl | tail -n 20 | nvim
+rm jrnl
+echo "asdasds" 
+cd ~/temp
+touch single
+nvim single
+single
+./single
+chmod 600 single
+ls -la
+chmod 700 single
+ls -la
+./single
+nvim single
+./single
+touch second
+touch third
+./single
+nvim single
+./single
+nvim single
+./single
+nvim single
+40; 40
+40 ; 50 ;60
+echo 40; echo 70
+print 40; print 60
+let p = 7; print $p; $p * 2
+print(let p = 7); print $p; $p * 2
+ssh vdsina
+kitty +kitten ssh vdsina
+nvim ~/.config/nushell/config.nu
+infocmp -a xterm-kitty | explore
+infocmp -a xterm-kitty
+infocmp -a xterm-kitty | ssh vdsina tic -x -o \~/.terminfo /dev/stdin
+ssh vdsina
+cd tmp
+cd ~/temp
+echo "helllo" | save test
+cat test
+test | wc
+cat test | wc
+cat test | wc -w
+test | wc -w
+./test | wc
+less test | wc
+test | explore | wc
+test | explore 
+ls | explore
+EOF | cat
+"kjhgkgk" | wc
+[ 23 = 23 ]
+echo $?
+[ 23 = 23 ]
+echo [ 23 = 23 ]
+23 == 34
+sudo pacman -S vlc
+sudo pacman -S libmpeg2
+sudo pacmans -S vlc-plugin-ffmpeg
+sudo pacman -S vlc-plugin-ffmpeg
+sudo pacman -S wireguard
+pacman -Ss wireguard
+sudo pacman -S wireguard-tools
+wg genkey | save privat
+ls
+cat privat
+cat privat | wg pubkey
+cat privat | wg pubkey | save public
+ls
+rm ~/temp/*
+ls
+ip addr
+wg genkey | save vps_wg
+cat vps_wg | wg pubkey | save vps_wg.pub
+ls
+sudo ip link add wg0 type wireguard
+ip addr
+cat /var/log/pacman.log | explore
+cat /var/log/pacman.log | tail -n 50
+grep -i "installed" /var/log/pacman.log | tail -n 50
+sudo pacman -Ru fish
+grep -i "installed" /var/log/pacman.log | tail -n 100
+sudo dmesg
+sudo dmesg | explore
+pacman -Qs alas-utils
+sudo pacman -S alsa-utils
+alsamixer
+history
+pwd
+ls
+ls -la
+history
+cd ~/temp
+ls
+cp vps_wg* ~/.wireguard
+mkdir ~/.wireguard
+cp vps_wg* ~/.wireguard
+ls ~/.wireguard
+cd ~/.wireguard/
+ls
+cat vps_wg
+cat vps_wg.pub
+ssh vdsina
+touch ~/.wireguard/client1.conf
+nvim ~/.wireguard/client1.conf
+cat ~/.wireguard/client1.conf
+nvim ~/.wireguard/client1.conf
+cat client1.conf
+sudo wg-quick up client1.conf
+wg-quick up ~/.wireguard/client1.conf
+nvim ~/.wireguard/client1.conf
+wg-quick up ~/.wireguard/client1.conf
+nvim ~/.wireguard/client1.conf
+wg-quick up ~/.wireguard/client1.conf
+pacman -Ss openresolv
+sudo pacman -S openresolv
+wg-quick up ~/.wireguard/client1.conf
+resolvconf -u
+sudo resolvconf -u
+wg-quick up ~/.wireguard/client1.conf
+ping 10.0.0.1
+wg-quick up ~/.wireguard/client1.conf
+ip addr
+cat ~/.wireguard/vps_wg.pub
+cat ~/.wireguard/vps_wg
+wg-quick up ~/.wireguard/client1.conf
+wg-quick down ~/.wireguard/client1.conf
+wg-quick up ~/.wireguard/client1.conf
+wg-quick -h
+ping 10.0.0.1
+ssh wiskas@10.0.0.1
+ping 10.0.0.1
+wg-quick up ~/.wireguard/client1.conf
+wg-quick down ~/.wireguard/client1.conf
+wg-quick up ~/.wireguard/client1.conf
+ping 10.0.0.1
+ping 8.8.8.1
+ssh wiskas@10.0.0.1
+ssh wiskas@10.0.0.1:2022
+ssh help
+help ssh
+ssh ?
+? ssh
+help
+ssh -h
+ssh wiskas@10.0.0.1 -p 2022 
+ssh vdsina
+wg
+nvim ~/.wireguard/client1.conf
+wg-quick up ~/.wireguard/client1.conf
+wg-quick down ~/.wireguard/client1.conf
+nmcli connection import type wireguard file ~/.wireguard/client1.conf
+nmcli
+nmcli device show
+nmcli
+sudo pacman -S cockpit
+sudo systemctl enable --now cockpit.socket
+sudo pacman -S wireguird
+yay -S wireguird
+yay -Ru wireguird
+ssh vdsina
+wg
+ip addr
+ping 10.0.0.1
+ping 109.107.178.129
+which nmap
+ping 109.107.178.129
+which nc
+sudo pacman -S nmap
+nmap -p 9093 109.107.178.129
+nmap -p 9093 -Pn 109.107.178.129
+nmap -p 9093  109.107.178.129
+nmap -p 9093 -Pn 109.107.178.129
+sudo pacman -Ru cockpit
+pacman -Ssyu
+sudo pacman -Syu
+ping 10.0.0.1
+sudo pacman -Syu
+makoctl menu -n 12345 wofi -d -p 'Choose Action: '
+makoctl menu -n 12345 wofi -p 'Choose Action: '
+makoctl menu -n 12345 wofi 'Choose Action: '
+makoctl menu wofi 'Choose Action: '
+makoctl menu wofi
+notifysend dddd
+notify-send dddd
+makoctl menu wofi
+makoctl menu wofi -p "asds"
+makoctl menu wofi "asds"
+makoctl list
+mkdir ~/.config/mako
+touch ~/.config/mako/config
+nvim ~/.config/mako/config
+makoctl reload
+notify-send ddddtest
+makoctl reload
+notify-send ddddtest
+makoctl reload
+notify-send ddddtest
+hyprpicker 
+notify-send ddddtest
+makoctl reload
+notify-send ddddtest
+makoctl reload
+notify-send ddddtest
+cd ~/.config/waybar/
+nvim config.jsonc
+nvim style.css
+makoctl reload
+notify-send ddddtest
+makoctl reload
+notify-send ddddtest
+cd ~/
+ls
+ls -la
+ls
+ls | sort-by name
+ls -la
+ls -la | sort-by name
+ls
+cd ~/.config/hypr/
+ls
+cd ../waybar/
+ls
+nvim config.jsonc.bak
+nvim style.css
+cd ~/.config/nvim/
+ls
+nvim
+fzf | nvim
+fzf | xargs nvim
+fastfetch
+clear
+fastfetch
+clear
+fastfetch
+flatpak install flathub org.qutebrowser.qutebrowser<\n>
+ip addr 
+wpaperctl next
+nvim ~/.config/nvim/lua/custom/plugins/
+touch ~/.config/nvim/lua/custom/plugins/orgmode.lua
+nvim ~/.config/nvim/lua/custom/plugins/orgmode.lua
+nvim
+wg-quick up ~/.wireguard/client1.conf
+ip help 
+ip tuntap
+ip addr
+ip -h addr
+wg status
+wh show
+wg show
+wg show wg0
+wg show ~/.wireguard/client1.conf
+sudo wg show wg0
+ip -d addr
+wg
+sudo wg
+wg-quick down ~/.wireguard/client1.conf
+ping 10.0.0.1
+wg-quick up ~/.wireguard/client1.conf
+wg
+ping 10.0.0.1
+resolvconf -u
+sudo resolvconf -u
+wg
+sudo wg-quick up client1.conf
+sudo wg-quick up ~/.wireguard/client1.conf
+wg
+sudo wg
+ip addr
+wg-quick down ~/.wireguard/client1.conf
+wg
+which nekoray
+sudo nekoray
+nekoray
+wg
+ip addr
+ping 8.8.8.8
+ls /dev/net/tun
+cat /dev/net/tun
+$APP_PROXY=1270.0.1:2080
+set $APP_PROXY=1270.0.1:2080
+set $APP_PROXY 1270.0.1:2080
+let $APP_PROXY 1270.0.1:2080
+let $APP_PROXY=1270.0.1:2080
+let $APP_PROXY "1270.0.1:2080"
+let $APP_PROXY = 1270.0.1:2080
+let $APP_PROXY = "127.0.0.1:2080"
+chrome
+google-chrome
+google-chrome-stable
+let $ALL_PROXY = "127.0.0.1:2080"
+google-chrome-stable
+history
+netstat help
+ssh vdsina
+sudo netstat help
+which netstat
+systemctl --failed
+journalctl -b
+iproute2 help
+iproute help
+which iproute
+which iprout
+ss help
+ss -help
+ss -l
+ss -l | grep 2080
+ss -h
+ss -B
+ss -i
+ss -tulpn
+ss -tulpn | grep 2080
+google-chrome-stable --proxy-server="sicks5://127.0.0.1:2080"
+google-chrome-stable --proxy-server="socks5://127.0.0.1:2080"
+google-chrome-stable --proxy-server="http://127.0.0.1:2080"
+google-chrome-stable --proxy-server="socks5://127.0.0.1:2080"
+ya -Ss throne
+yay -Ss throne
+yay -S throne
+throne
+cd ~/.config/niri/
+ls
+niri msg focused-window
+niri msg -h
+niri msg windows
+throne
+sudo throne
+resolvconf -u
+sudo resolvconf -u
+ip addr
+sudo pacman -S kvantum-qt5
+kvantum-qt5
+clear
+fastfetch
+clear
+fastfetch
+nvim
+cd ~/.config/
+ls
+mv nvim nvim_old
+ls
+pacman Qs nvim
+pacman -Qs nvim
+fd
+fd app
+git clone https://github.com/nvim-lua/kickstart.nvim.git ~/.config/nvim
+ls
+cd nvim
+ls
+nvim .
+exit
+:qexit
+exit
+nvim
+exit
+nvim
+xdg-open --help
+flatpak install flathub org.gnome.Papers
+man xdg-open
+lsof
+lsof | grep ~/.config/
+lsof -h
+sudo pacman -Syu
+free
+free -h
+nmcli connetcion show
+nmcli connection show
+nmcli connection modify client1 connection.autoconnect no
+ls ~/.local/
+ls ~/.local/bin/
+amd-pstate
+PATH
+$PATH
+echo $PATH
+$env.PATH
+$env.PATH | table
+$env.PATH | table -e
+$env 
+$env | table
+$env | table -e
+$env | table
+$env | table -e
+$env.config | table -e | less -R
+q;q
+exit
+config nu
+$env.PATH | table -e
+$env.PATH | table -e | grep .local
+pacman -Ss tree-sitter
+pacman -S tree-sitter-cli
+sudo pacman -S tree-sitter-cli
+which tree-sitter
+which tree-sitter-cli
+tree-sitter
+tree-sitter-cli
+ls /usr/share/tree-sitter/
+ls $env.PATH
+find ~ -i tree-sitter
+find /home/wiskas/ -i tree-sitter
+fd -h
+fd "tree-sitter" "~"
+fd "tree-sitter" "/"
+$env.PATH | table -e 
+fd "tree-sitter-cli" "/"
+tee-sitter --version
+tree-sitter --version
+nvim
+history
+config nu
+scope aliases
+vim
+config nu
+cd ~/.config/nushell/
+ls
+config 
+config nu
+vim
+scope aliases
+history | fzf
+fzf ~
+ls ~ | fzf
+ls -la ~ | fzf
+ls -alR
+tree
+fd "" "~" | fzf
+fd "" "~" 
+fd "*" "~" 
+fd "*" "/home/wiskas/" 
+fd "*.*" "/home/wiskas/" 
+find . -type d
+find . -t d
+find -h
+find
+sudo pacman -S tree
+tree ~
+tree ~ | fzf
+tree ~ | find -r "nvim"
+tree ~ | find -r "*config*"
+tree ~ | find -r "*config"
+tree ~ | find -r "config"
+tree ~ | find -r "config" "nvim"
+tree ~ | find config
+tree ~ | find config nvim
+tree ~ | fzf "asfd"
+tree ~ | fzf 
+sudo pacman -Ru tree
+nvim
+throne --help
+throne --version
+pacman -Ss walker
+yay -Ss walker
+yay -S walker-bin
+walker
+cd ~/.config/niri/
+ls
+history | fzf
+cd ~/.config/niri/
+nvim config.kdl
+sudo systemctl reboot
+niri validate
+nvim ~/.config/niri/config.kdl
+sudo systemctl reboot
+nvim ~/.config/niri/config.kdl
+walker -C
+cd ~/.config/
+ls
+cd walker/
+ls
+cd themes/
+ls
+cd ..
+sudo pacman -Suy
+sudo pacman -Ru wofi
+sudo pacman -Suy
+ssh vdsina
+ping 109.107.178.129
+cd ~/.config/kitty/
+ls
+sudo systemctl reboot
+ssh vdsina
+sudo systemctl status wg
+sudo systemctl status wg-quick
+sudo systemctl status wireguard
+wg
+wg status
+wg show
+ip addr
+sudo systemctl status wireguard
+sudo systemctl status wg-quick.service
+sudo systemctl --user status wg-quick.service
+systemctl --user status wg-quick.service
+systemctl --user status wg-quick@.service
+qq
+wg-quick down ~/.wireguard/client1.conf
+sudo tcpdump -i ens3 #CHeck incoming traffic on port
+ls /etc/wireguard/
+sudo ls /etc/wireguard/
+sudo ls -la /etc/wireguard/
+ls /etc/
+wg
+ping 10.0.0.1
+ping 109.107.178.129
+ping 10.0.0.1
+wg-quick down ~/.wireguard/client1.conf
+wg
+sudo wg
+ssh vdsina
+wg-quick down ~/.wireguard/client1.conf
+wg-quick down client1
+sudo wg-quick down client1
+sudo cp ~/.wireguard/client1.conf /etc/wireguard/
+sudo ls /etc/wireguard/
+wg-quick down client1
+sudo wg-quick down client1
+sudo ls /etc/wireguard/
+sudo cat /etc/wireguard/client1.conf
+sudo wg-quick down wg0
+wg-quick up ~/.wireguard/client1.conf
+sudo wg
+wg -h
+wg show
+wg showconf
+wg showconf client1
+sudo wg showconf client1
+resolvconf -u
+sudo resolvconf -u
+wg-quick up ~/.wireguard/client1.conf
+wg
+sudo wg
+wg down client1
+wg-quick down client1
+wg
+wg-quick up ~/.wireguard/client1.conf
+ping 10.0.0.1
+wg-quick down ~/.wireguard/client1.conf
+ping 10.0.0.1
+trace 10.0.0.1
+traceroute 10.0.0.1
+mtr 10.0.0.1
+tracepath 10.0.0.1
+ping 10.0.0.1
+tracepath 10.0.0.1
+wg-quick up ~/.wireguard/client1.conf
+resolvconf -u
+wg-quick up ~/.wireguard/client1.conf
+resolvconf -u
+sudo resolvconf -u
+wg-quick up ~/.wireguard/client1.conf
+wg
+sudo wg
+wg show
+sudo wg show
+sudo wg showconf
+sudo wg showconf client1
+sudo wg show
+sudo wg
+pacman -Ss parsec
+yay -Ss parsec
+yay -S parsec-bin
+tracepath 10.0.0.1
+flatpak install flathub com.parsecgaming.parsec
+pacman -Qs flatpak
+flatpak install ~/Downloads/com.parsecgaming.parsec.flatpakref
+pacman -Ss parsec
+yay -Ss parsec
+yay -S parsec-bin
+which parsec-bin
+which parsec
+pacman -Ss overskride
+yay -Ss overskride
+yay -S overskride-bin
+overskride
+fc-list 
+fc-list | explore
+fc-list | nvim
+killall waybar
+waybar
+sudo pacman -Syu
+waybar
+nvim ~/.config/waybar/config.jsonc
+killall waybar
+overskride
+nvim
+cd ~/.config/nvim/
+ls
+nvim
+cd ~
+ls
+nvim ~/.config/nvim/lua/custom/plugins/orgmode.lua
+cd ~
+ls
+mkdir ~/orgfiles
+touch ~/orgfiles/refile.org
+cd ~/orgfiles/
+ls
+cat refile.org
+nvim ~/.config/nvim/lua/custom/plugins/init.lua
+yay -Ss blick-cmp
+yay -Ss blink
+yay -Ss blink-cmp
+nvim ~/.config/nvim/init.lua
+nvim
+cd ~/orgfiles/
+nvim .
+nvim
+cd ~/.config/nvim/
+nvim
+cd ~/.config/kitty/
+:q
+nvim kitty.conf
+nvim
+nvim kitty.conf
+nvim
+nvim ~/.config/nvim/init.lua
+nvim
+nvim .
+nvim ~/orgfiles/refile.org
+cd ~/.config/nvim_old/
+ls
+cd lua
+ls
+nvim ~/.config/nvim/init.lua
+nvim options.lua
+cd ~
+ls
+vim
+mv ./ogrfiles/* ./Org
+mv ./orgfiles/* ./Org
+ls
+ls orgfiles/
+rm orgfiles/
+ls
+cd Org
+cat Org
+rm Org
+mkdit Org
+mkdir Org
+ls
+cd Org/
+touch refile.org
+touch journal.org
+touch nvim.org
+touch linux.org
+syncthing 
+pacman -Ss kde-connect
+pacman -Ss kde-con
+yay -Ss kde-con
+pacman -Ss kde
+pacman -Ss kdeconnect
+sudo pacmab -S kdeconnect
+sudo pacman -S kdeconnect
+kdeconnect-app 
+notify-send dfdfdf
+kdeconnect-settings 
+kdeconnect-handler 
+kdeconnect-indicator 
+namp -h
+nmap -h
+wg-quick up ~/.wireguard/client1.conf
+sudo wg-quick up ~/.wireguard/client1.conf
+wg
+ip addr
+wg-quick up ~/.wireguard/client1.conf
+wg-quick down ~/.wireguard/client1.conf
+cd ~/.wireguard/
+ls
+cat client1.conf
+pwd
+chmod 600 client1.conf
+pacman -Ss wireguard-tools
+lsmod | grep wireguard
+sudo modprobe wireguard
+sudo pacman -S wireguard-tools
+sudo modprobe wireguard
+wireguard
+cat vps_wg.pub
+sudo dmesg | grep wireguard
+sudo wg show
+ssh vdsina
+sudo wg show
+sudo dmesg | grep wireguard
+top
+sudo modprobe wireguard
+ls /etc/wireguard/
+sudo ls /etc/wireguard/
+sudo cat /etc/wireguard/clent1.conf
+ls /etc/wireguard/
+sudo ls /etc/wireguard/
+cd /etc/wireguard/
+sudo cd /etc/wireguard/
+ls
+wg-quick down ~/.wireguard/client1.conf
+wg-quick down ~/.wireguard/client1
+nvim ~/.wireguard/client1.conf
+wg-quick up ~/.wireguard/client1.conf
+sudo wg-quick up ~/.wireguard/client1.conf
+wg
+wg-quick up ~/.wireguard/client1.conf
+sudo resolvconf -u
+wg-quick up ~/.wireguard/client1.conf
+ssh vdsina
+wg-quick down ~/.wireguard/client1.conf
+ping 10.0.0.1
+wg-quick up ~/.wireguard/client1.conf
+ping 10.0.0.1
+wg-quick down ~/.wireguard/client1.conf
+ping 10.0.0.1
+wg-quick up ~/.wireguard/client1.conf
+ping 10.0.0.1
+nmap -p 9093 10.0.0.1
+nmap -p 59001 10.0.0.1
+nmap -p 59001 -Pn 10.0.0.1
+ssh vdsina
+sudo pacman -Syu
+cd ~/.config/kitty/
+ls
+vim kitty.conf
+exit
+pacman -Ss kitty
+cd ~/.config/
+ls
+ls -a
+ls -a | grep nu
+cd nushell
+ls
+nvim env.nu
+echo $TERM
+env.$TERM
+$env.TERM
+wg-quick up ~/.wireguard/client1.conf
+wg
+sudo wg
+ip addr
+ping 10.0.0.1
+wg-quick down ~/.wireguard/client1.conf
+ping 10.0.0.1
+ssh vdsina
+ip addr
+kitty -h
+cd nushell
+cd ~/.config/kitty/
+ls
+vim kitty.conf
+cd ~/.config/nushell/
+ls
+vim config.nu
+vim
+cd ~/.config/nushell/
+ls
+nvim config.nu
+vim
+pacman -Ss ziox
+pacman -Ss zioxid
+yay -Ss zioxid
+yay -Ss zoxid
+pacman -Ss zoxid
+z condig
+$nu.env-path
+$nu.env-path | nvim
+nvim ~/.config/nushell/config.nu
+$nu.env-path 
+zoxide init nushell | save -f ~/.zoxide.nu
+cd ~/
+ls- la
+ls -la
+nvim .zoxide.nu
+fzf
+z config
+z nvim
+z kitty
+z nvim custom
+z nvim config
+z nvim
+pwd
+z custom
+zoxide query -l -s
+ss -a
+ss -h
+ss -loe
+ss -lo
+ss -le
+ss -lo
+ss -le
+ip route show
+sudo iptables -L
+sudo tpcdump -i wlan0
+sudo tcpdump -i wlan0
+ufw status
+sudo pacman -S apache2
+pacman -Ss apache
+sudo pacman -S apache
+ip addr
+sudo ip addr add 192.168.2.10/24 dev wlan0
+ip addr
+sudo ipatables -A INPUT -p tcp --dport 80 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+sudo systemctl start apache
+which apache
+apache2
+which apache2
+apache-2.4.63-3-x86_64
+sudo systemctl start httpd.service
+curl http://192.168.2.10
+sudo systemctl stop httpd.service
+sudo systemctl status httpd.service
+sudo ip adde remove 192.168.2.10/24
+sudo ip addr remove 192.168.2.10/24
+ip addr -h
+ip addr help
+ip addr del 192.168.2.10 dev wlan0
+sudo ip addr del 192.168.2.10 dev wlan0
+sudo ip addr del 192.168.2.10/24 dev wlan0
+ip addr
+sudo resolvconf -u
+sudo wg
+sudo wg-quick up ~/.wireguard/client1.conf
+wg
+sudo wg
+ping 10.0.0.1
+nvim ~/.wireguard/client1.conf
+wg
+sudo wg
+sudo wg
+which cockpit
+ip a
+sudo tcpdump -i client1 icmp
+lsof
+lsof -p 90
+sudo netstat -a -p
+pacman -Ss tcpdump
+sudo pacman -S tcpdump
+ss
+ss -n -t
+sudo systemctl status wg-quick.service
+wg-quick down ~/.wireguard/client1.conf
+ping 10.0.0.1
+wg-quick up ~/.wireguard/client1.conf
+tcpdump -i client1
+sudo tcpdump -i client1
+ping 10.0.0.1
+ip a
+sudo tcpdump -i client1 icmp
+exi
+wg-quick down ~/.wireguard/client1.conf
+nvim **
+fzf
+sudo pacman -Ss television
+sudo pacman -S television
+television
+which television
+tv
+tv config
+tv files
+mkdir ~/.config/television/cable/
+cd ~/.config/television/cable/
+touch files.toml
+vim files.toml
+tv files
+sudo pacman -S bat
+tv files
+vim files.toml
+tv files
+cd nvim
+z nvim
+tv files
+tv
+fd "*.*" "/home/wiskas/" 
+cd ..
+ls
+cd television/
+ls
+vim config.toml
+cd ../nushell/
+ls
+nvim config.nu
+tv export
+tv env
+nvim config.nu
+z television
+nvim config.toml
+nvim ~/Org/
+pacman -Ss zelij
+pacman -Ss zellij
+sudo pacman -S bat
+sudo pacman -S zellij
+ls
+bat config.toml
+zellij
+vim orgmode
+cd ~/.config/waybar/
+ls
+cat config.jsonc | grep "pulse"
+cat .
+cat ./
+ls
+cat *.jsonc
+ls
+ls | grep ".css"
+ls > grep ".css"
+pacman -Ss obs
+pacman -Ss obsstudio
+pacman -Ss obs-studio
+flatpak install flathub com.obsproject.Studio
+flatpak list
+flatpak run com.obsproject.Studio
+flatpak install flathub io.github.webcamoid.Webcamoid
+flatpak run io.github.webcamoid.Webcamoid
+flatpak list
+flatpak -h
+flatpak list
+flatpak uninstall flathub.webcamoid.Webcamoid
+flatpak uninstall io.github.webcamoid.Webcamoid
+cd ~/.ssh/
+ls
+sudo ufw status
+ss -n -t
+ss -tulpn
+ssh-agent 
+ss -tulpn
+ps -aux | grep ssh
+ps -aux 
+ps 
+ps | grep ssh
+ssh vdsina
+ps | grep ssh
+ip addr
+sudo tcpdump -i wlan0 
+sudo tcpdump -i wlan0 -icmp
+sudo tcpdump -i wlan0 -help
+sudo tcpdump -i wlan0 dst port 22
+sudo tcpdump -i wlan0 dst port 22 -v
+sudo tcpdump -i wlan0
+pacman -Ss postgresql
+pacman -Ss postgresql 16
+pacman -Ss postgresql 17
+pacman -Ss postgresql 17.5-4
+sudo pacman -S postreSQL
+sudo pacman -S postresql
+sudo pacman -S postgresql
+eval "$(ssh-agent -s)"
+ssh-agent -s
+nvim ~/Org/
+syncthing 
+nvim ~/.config/waybar/style.css
+free
+nvim ~/Org/finance.org
+vim ~/Org/
+television
+pacman -Ss television
+sudo pacman -Ru television
+pacman -Ss sonnet
+cd ~/Pictures/
+ls
+cd Screenshots/
+ls
+dolphin 
+sudo pacman -Syu
+btrfs-assistant 
+sudo btrfs-assistant 
+cd ~/.config/
+ls -la
+ls
+cd ~
+ls
+cd Downloads/
+ls
+cd dotfiles/
+ls
+z ..
+z dotfiles/
+pwd
+cp waybar ~/Downloads/dotfiles/waybar
+cp ./waybar ~/Downloads/dotfiles/waybar
+cp ./waybar/* ~/Downloads/dotfiles/waybar
+cp ~/.config/waybar/* ~/Downloads/dotfiles/waybar/
+cp -r ~/.config/waybar/* ~/Downloads/dotfiles/waybar/
+ls
+la
+ls
